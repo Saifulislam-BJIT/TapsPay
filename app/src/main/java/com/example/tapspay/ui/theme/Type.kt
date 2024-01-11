@@ -2,11 +2,25 @@ package com.example.tapspay.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.tapspay.R
 
 // Set of Material typography styles to start with
+val soraFontFamily = FontFamily(
+    Font(R.font.sora_bold, FontWeight.Bold),
+    Font(R.font.sora_extra_bold, FontWeight.ExtraBold),
+    Font(R.font.sora_extra_light, FontWeight.ExtraLight),
+    Font(R.font.sora_light, FontWeight.Light),
+    Font(R.font.sora_medium, FontWeight.Medium),
+    Font(R.font.sora_regular, FontWeight.Normal),
+    Font(R.font.sora_semi_bold, FontWeight.SemiBold),
+    Font(R.font.sora_thin, FontWeight.Thin),
+)
+
+
 val Typography = Typography(
     bodyLarge = TextStyle(
         fontFamily = FontFamily.Default,
