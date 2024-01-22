@@ -114,9 +114,9 @@ fun LoginScreen(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.SpaceEvenly
                     ) {
-                        BrandIcon(painter = R.drawable.facebook_icon)
-                        BrandIcon(painter = R.drawable.facebook_icon)
-                        BrandIcon(painter = R.drawable.facebook_icon)
+//                        BrandIcon(painter = R.drawable.facebook_icon)
+//                        BrandIcon(painter = R.drawable.facebook_icon)
+//                        BrandIcon(painter = R.drawable.facebook_icon)
                     }
                 }
             }
