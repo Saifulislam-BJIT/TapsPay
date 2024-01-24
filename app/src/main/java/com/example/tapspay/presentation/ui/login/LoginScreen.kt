@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.tapspay.R
+import com.example.tapspay.presentation.ui.components.TapsPayCheckBox
 import com.example.tapspay.presentation.ui.components.TapsPayInput
 import com.example.tapspay.ui.theme.Magnolia
 import com.example.tapspay.ui.theme.White
@@ -97,6 +98,7 @@ fun LoginScreen(
                 TapsPayInput("",{}, "df")
                 TapsPayInput("",{}, "df", true)
                 TapsPayInput("",{}, "df", true, true)
+                TapsPayCheckBox(label = "Terms and Condition")
                 OutlinedTextField(
                     value = "",
                     onValueChange = {},
