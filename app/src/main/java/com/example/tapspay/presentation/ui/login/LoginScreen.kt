@@ -27,6 +27,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.tapspay.R
 import com.example.tapspay.presentation.ui.components.TapsPayCheckBox
+import com.example.tapspay.presentation.ui.components.TapsPayDropdown
 import com.example.tapspay.presentation.ui.components.TapsPayInput
 import com.example.tapspay.ui.theme.Magnolia
 import com.example.tapspay.ui.theme.White
@@ -95,17 +96,19 @@ fun LoginScreen(
                     fontFamily = soraFontFamily,
                     fontWeight = FontWeight.Bold
                 )
-                TapsPayInput("",{}, "df")
-                TapsPayInput("",{}, "df", true)
-                TapsPayInput("",{}, "df", true, true)
-                TapsPayCheckBox(label = "Terms and Condition")
-                OutlinedTextField(
-                    value = "",
-                    onValueChange = {},
-                    placeholder = { Text(text = "7x-xxx-xxx") },
-                    label = { Text(text = stringResource(id = R.string.mobile_number)) },
-                    modifier = Modifier.fillMaxWidth()
-                )
+                val options = listOf("Option 1","Option 2", "Option 3")
+                TapsPayDropdown("Drop down", options)
+//                TapsPayInput("",{}, "df")
+//                TapsPayInput("",{}, "df", true)
+//                TapsPayInput("",{}, "df", true, true)
+//                TapsPayCheckBox(label = "Terms and Condition")
+//                OutlinedTextField(
+//                    value = "",
+//                    onValueChange = {},
+//                    placeholder = { Text(text = "7x-xxx-xxx") },
+//                    label = { Text(text = stringResource(id = R.string.mobile_number)) },
+//                    modifier = Modifier.fillMaxWidth()
+//                )
                 Spacer(modifier = Modifier.height(48f.pxToDpHeight(context)))
 
                 Column(
