@@ -27,6 +27,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.tapspay.R
 import com.example.tapspay.presentation.ui.components.TapsPayCheckBox
+import com.example.tapspay.presentation.ui.components.TapsPayDatePicker
 import com.example.tapspay.presentation.ui.components.TapsPayDropdown
 import com.example.tapspay.presentation.ui.components.TapsPayInput
 import com.example.tapspay.ui.theme.Magnolia
@@ -98,6 +99,7 @@ fun LoginScreen(
                 )
                 val options = listOf("Option 1","Option 2", "Option 3")
                 TapsPayDropdown("Drop down", options)
+                TapsPayDatePicker(showDialog = true)
 //                TapsPayInput("",{}, "df")
 //                TapsPayInput("",{}, "df", true)
 //                TapsPayInput("",{}, "df", true, true)
