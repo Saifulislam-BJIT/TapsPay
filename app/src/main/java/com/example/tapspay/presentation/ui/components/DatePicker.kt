@@ -1,5 +1,6 @@
 package com.example.tapspay.presentation.ui.components
 
+import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -17,6 +18,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import java.text.SimpleDateFormat
+import java.util.Date
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -25,15 +28,21 @@ fun TapsPayDatePicker(
 ) {
     val dateState = rememberDatePickerState()
     var dialog by remember{ mutableStateOf(showDialog) }
-    DatePickerDialog(
-        onDismissRequest = { dialog = false },
-        confirmButton = {
-            Button(onClick = { dialog = false  }) {
-                Text(text = "Confirm")
+    val formatter = SimpleDateFormat("dd/MM/yyyy")
+    Log.d("TAG", "Dialog Status: ${dateState.selectedDateMillis}")
+    Log.d("TAG", "Dialog Status: ${dateState.selectedDateMillis?.let { Date(it) }
+        ?.let { formatter.format(it) }}")
+    if (dialog){
+        DatePickerDialog(
+            onDismissRequest = { dialog = false },
+            confirmButton = {
+                Button(onClick = { dialog = false  }) {
+                    Text(text = "Confirm")
+                }
             }
+        ) {
+            DatePicker(state = dateState)
         }
-    ) {
-        DatePicker(state = dateState)
     }
 }
 
